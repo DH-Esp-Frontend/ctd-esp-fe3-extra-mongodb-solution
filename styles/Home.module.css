@@ -82,14 +82,15 @@
   border: 1px solid #eaeaea;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
+  width: 4000px;
 }
 
 .card:hover,
 .card:focus,
 .card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+  color: #fc5b63;
+  border-color: #fc5b63;
+  cursor: pointer;
 }
 
 .card h2 {
@@ -108,6 +109,10 @@
   margin-left: 0.5rem;
 }
 
+.mongo{
+  color: #fcb4b4;
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;
@@ -123,7 +128,5 @@
   .code {
     background: #111;
   }
-  .logo img {
-    filter: invert(1);
-  }
+
 }
