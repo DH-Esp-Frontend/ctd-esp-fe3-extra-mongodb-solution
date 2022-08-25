@@ -1,4 +1,4 @@
-import {  GetStaticProps, NextPage } from 'next'
+import {  GetServerSideProps, NextPage } from 'next'
 import React from 'react'
 import styles from '../styles/Home.module.css'
 
@@ -37,7 +37,7 @@ const Sale: NextPage<Props> = ({hotels}) => {
   )
 }
 
-export const getStaticProps: GetStaticProps =async () => {
+export const getServerSideProps: GetServerSideProps =async () => {
     const data = await fetch("http://localhost:3000/api/ranked")
     const res = await data.json()
     const hotels: Hotel[] = JSON.parse(JSON.stringify(res))

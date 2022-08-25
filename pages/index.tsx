@@ -1,4 +1,4 @@
-import type { GetStaticProps, NextPage } from 'next'
+import type { GetServerSideProps, NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
@@ -65,7 +65,7 @@ const Home: NextPage<Props> = ({isConnected, hotels}) => {
 
 export default Home
 
-export const getStaticProps: GetStaticProps = async()=>{
+export const getServerSideProps: GetServerSideProps = async()=>{
 
   try{
     const { db } = await connectToDatabase()

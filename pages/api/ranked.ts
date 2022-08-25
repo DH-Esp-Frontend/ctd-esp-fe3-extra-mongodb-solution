@@ -7,7 +7,8 @@ const handler =async (req:NextApiRequest, res: NextApiResponse) => {
   const { db } = await connectToDatabase()
   const data = await db
   .collection("listingsAndReviews")
-  .find({"review_scores.review_scores_rating": {$gte: 90}})
+  .find({})
+  .filter({"review_scores.review_scores_rating": {$gte: 90}})
   .limit(20)
   .toArray();
 
